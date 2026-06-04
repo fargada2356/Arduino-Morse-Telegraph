@@ -11,6 +11,26 @@ This project features a digital Morse Code Telegraph built using an **Arduino Un
 
 ---
 
+## 📂 Project Structure
+
+This project is built using **PlatformIO** inside VS Code. Below is the organization of the main directory and files:
+
+```text
+Morse-Telegraph/
+├── .github/workflows/
+│   └── c-cpp.yml       # GitHub Actions CI/CD automation for compiling the code
+├── include/            # Header files (.h) for external definitions
+├── lib/                # Custom or external libraries used in the project
+├── src/                # Main source code folder
+│   └── main.cpp        # Principal logic containing loop() and setup()
+├── .gitignore          # Specifies intentionally untracked files to ignore
+├── diagram.json        # Hardware schematic and wiring setup created in Wokwi
+├── platformio.ini      # Main configuration file for PlatformIO (defines board, framework)
+├── README.md           # Project documentation and setup guide
+└── wokwi.toml          # Configuration file to link PlatformIO with the Wokwi simulator```
+
+---
+
 ##  Media & Demonstration
 
 ### Project Setup
