@@ -17,8 +17,6 @@ This project is built using **PlatformIO** inside VS Code. Below is the organiza
 
 ```text
 Morse-Telegraph/
-├── .github/workflows/
-│   └── c-cpp.yml       # Automates code compilation on GitHub
 ├── src/                # Core logic and module files
 │   ├── Button.h        # Detects dots and dashes based on press duration
 │   ├── Buzzer.h        # Handles the telegraph sound feedback (Pin 11)
