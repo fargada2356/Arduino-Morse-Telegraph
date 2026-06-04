@@ -11,9 +11,9 @@ This project features a digital Morse Code Telegraph built using an **Arduino Un
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
-This project is built using **PlatformIO** inside VS Code. Below is the organization of the main directory and files:
+This project is built using **PlatformIO** extension via VS Code. Below is the necessary organization of the files and folders for the project:
 
 ```text
 Morse-Telegraph/
@@ -50,22 +50,27 @@ https://github.com/user-attachments/assets/b851fc04-f61c-49b3-b482-72aec830606a
 
 The components share a common ground (GND) rail on the breadboard to close the circuit safely. Below are the precise pin mappings for the project:
 
-### 1. 7-Segment Display (Common Cathode)
-*The upper middle pin (Pin 8) is left disconnected. The bottom middle pin (Pin 3) is connected to a current-limiting resistor, which hooks into the breadboard's GND rail via a jumper wire.*
+### 1. 7-Segment Display Wiring (Made Simple)
 
-| Segment | Arduino Pin | Display Pin | Description |
-| :---: | :---: | :---: | --- |
-| **A** | Pin 7 | Pin 7 | Upper horizontal bar |
-| **B** | Pin 6 | Pin 6 | Top-right vertical bar |
-| **C** | Pin 5 | Pin 4 | Bottom-right vertical bar |
-| **D** | Pin 4 | Pin 2 | Bottom horizontal bar |
-| **E** | Pin 3 | Pin 1 | Bottom-left vertical bar |
-| **F** | Pin 2 | Pin 9 | Top-left vertical bar |
-| **G** | Pin 8 | Pin 10 | Middle horizontal bar |
-| **DP** | Pin 9 | Pin 5 | Decimal point (Bottom-right) |
-| **GND** | GND | Pin 3 | Connected via resistor to Ground |
+The 1-digit display has 10 pins in total (5 on the top side, 5 on the bottom side). Here is the exact way to connect them from left to right:
 
-### 2. Peripheral Components
-* **Input Button:** Connected to **Pin 12** on the Arduino, with the opposite terminal running a jumper wire directly to the negative (GND) rail.
-* **Red LED Diode:** Connected to **Pin 13**. The shorter negative leg (Cathode) is wired through a protecting resistor straight into the negative (GND) rail.
-* **Active Buzzer:** The positive terminal is hooked to **Pin 11**, while the negative terminal goes straight to the GND rail.
+#### TOP SIDE (Counted from Left to Right)
+* **Pin 10** (Far Left) Connects to **Arduino Pin 8** (Middle bar)
+* **Pin 9** Connects to **Arduino Pin 2** (Top-Left bar)
+* **Pin 8** (Middle) **LEAVE EMPTY** (Not connected)
+* **Pin 7** Connects to **Arduino Pin 7** (Top horizontal bar)
+* **Pin 6** (Far Right) Connects to **Arduino Pin 6** (Top-Right bar)
+
+#### BOTTOM SIDE (Counted from Left to Right)
+* **Pin 1** (Far Left) Connects to **Arduino Pin 3** (Bottom-Left bar)
+* **Pin 2** Connects to **Arduino Pin 4** (Bottom horizontal bar)
+* **Pin 3** (Middle) Connects to a **Resistor**, which then goes to the **GND** rail
+* **Pin 4** Connects to **Arduino Pin 5** (Bottom-Right bar)
+* **Pin 5** (Far Right) Connects to **Arduino Pin 9** (Decimal Point dot)
+
+---
+
+### 2. Other Components (Button, LED & Buzzer)
+* **The Button:** Connect one side to **Arduino Pin 12** and the other side to **GND** (minus rail).
+* **The Red LED:** Connect the long leg to **Arduino Pin 13** and the short leg through a **Resistor** to **GND**.
+* **The Buzzer:** Connect the positive (+) pin to **Arduino Pin 11** and the negative (-) pin to **GND**.
