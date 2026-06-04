@@ -20,7 +20,11 @@ Here is how the complete hardware configuration looks on the breadboard:
 ### Video Demonstration
 Here I am demonstrating the Morse Telegraph in action, showing the button inputs, buzzer sounds, and the 7-segment display updates:
 
-[![Watch the Video](https://youtu.be/JWow_9rV3_Y)]
+
+
+https://github.com/user-attachments/assets/b851fc04-f61c-49b3-b482-72aec830606a
+
+
 
 ---
 
