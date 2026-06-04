@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 240, "left": -100, "attrs": {} },
+    { "type": "wokwi-7segment", "id": "sevseg", "top": 30, "left": 180, "attrs": { "common": "anode" } },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": -150, "left": -80, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btn", "top": 450, "left": 220, "attrs": { "color": "red" } },
+    { "type": "wokwi-buzzer", "id": "bz", "top": 440, "left": 60, "attrs": {} },
+    { "type": "wokwi-led", "id": "led", "top": 250, "left": 180, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 150, "left": 150, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 290, "left": 150, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "uno:5V", "r1:1", "red", [] ],
+    [ "r1:2", "sevseg:COM.1", "red", [] ],
+    [ "uno:2", "sevseg:A", "blue", [] ],
+    [ "uno:3", "sevseg:B", "blue", [] ],
+    [ "uno:4", "sevseg:C", "blue", [] ],
+    [ "uno:5", "sevseg:D", "blue", [] ],
+    [ "uno:6", "sevseg:E", "blue", [] ],
+    [ "uno:7", "sevseg:F", "blue", [] ],
+    [ "uno:8", "sevseg:G", "blue", [] ],
+    [ "uno:9", "sevseg:DP", "blue", [] ],
+    [ "uno:12", "btn:2.1", "green", [] ],
+    [ "uno:GND", "btn:1.1", "black", [] ],
+    [ "uno:11", "bz:1", "purple", [] ],
+    [ "uno:GND", "bz:2", "black", [] ],
+    [ "uno:13", "r2:1", "orange", [] ],
+    [ "r2:2", "led:A", "orange", [] ],
+    [ "uno:GND", "led:K", "black", [] ],
+    [ "uno:GND", "lcd:GND", "black", [] ],
+    [ "uno:5V", "lcd:VCC", "red", [] ],
+    [ "uno:A4", "lcd:SDA", "magenta", [] ],
+    [ "uno:A5", "lcd:SCL", "magenta", [] ]
+  ],
+  "dependencies": {}
+}

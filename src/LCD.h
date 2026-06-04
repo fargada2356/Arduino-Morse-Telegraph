@@ -18,8 +18,15 @@ class LCD {
         _lcd->backlight();
       }
 
-      void showDisplayMessage() {
-        
+      void showDisplayMessage(String morseInput, char translatedLetter) {
+        _lcd->setCursor(0, 0);
+        _lcd->print("Msg: ");
+        _lcd->print(morseInput);
+        _lcd->print("     ");
+
+        _lcd->setCursor(0, 1);
+        _lcd->print("Input: ");
+        _lcd->print(translatedLetter);
       }
 
 };
