@@ -1,1 +1,36 @@
-# Arduino-Morse-Telegraph
+# Arduino Morse Telegraph
+
+This project features a digital Morse Code Telegraph built using an **Arduino Uno** microcontroller. It integrates several hardware components that work in synergy to encode inputs, provide auditory and visual feedback, and display characters in real-time.
+
+##  How It Works
+* **The Button:** Acts as the primary input. A single short tap registers as a **dot (.)**, while holding the button down (for 1 second) registers as a **dash (-)**.
+* **LCD Display (16x2):** Provides the main visual information, showing how the telegraph reacts to your input and printing the translated text.
+* **Active Buzzer:** Emits a sound tone whenever the button is pressed or held down, mimicking a classic telegraph.
+* **Red LED Diode:** Synchronizes with the buzzer to provide a clear visual light signal during button presses.
+* **1-Digit 7-Segment Display:** The "main character" of the project. It is strictly tied into the software logic to display the current character or count dynamically.
+
+---
+
+##  Hardware & Pin Configuration
+
+The components share a common ground (GND) rail on the breadboard to close the circuit safely. Below are the precise pin mappings for the project:
+
+### 1. 7-Segment Display (Common Cathode)
+*The upper middle pin (Pin 8) is left disconnected. The bottom middle pin (Pin 3) is connected to a current-limiting resistor, which hooks into the breadboard's GND rail via a jumper wire.*
+
+| Segment | Arduino Pin | Display Pin | Description |
+| :---: | :---: | :---: | --- |
+| **A** | Pin 7 | Pin 7 | Upper horizontal bar |
+| **B** | Pin 6 | Pin 6 | Top-right vertical bar |
+| **C** | Pin 5 | Pin 4 | Bottom-right vertical bar |
+| **D** | Pin 4 | Pin 2 | Bottom horizontal bar |
+| **E** | Pin 3 | Pin 1 | Bottom-left vertical bar |
+| **F** | Pin 2 | Pin 9 | Top-left vertical bar |
+| **G** | Pin 8 | Pin 10 | Middle horizontal bar |
+| **DP** | Pin 9 | Pin 5 | Decimal point (Bottom-right) |
+| **GND** | GND | Pin 3 | Connected via resistor to Ground |
+
+### 2. Peripheral Components
+* **Input Button:** Connected to **Pin 12** on the Arduino, with the opposite terminal running a jumper wire directly to the negative (GND) rail.
+* **Red LED Diode:** Connected to **Pin 13**. The shorter negative leg (Cathode) is wired through a protecting resistor straight into the negative (GND) rail.
+* **Active Buzzer:** The positive terminal is hooked to **Pin 11**, while the negative terminal goes straight to the GND rail.
