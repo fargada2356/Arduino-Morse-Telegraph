@@ -27,7 +27,8 @@ Morse-Telegraph/
 ├── diagram.json        # Hardware schematic and wiring setup created in Wokwi
 ├── platformio.ini      # Main configuration file for PlatformIO (defines board, framework)
 ├── README.md           # Project documentation and setup guide
-└── wokwi.toml          # Configuration file to link PlatformIO with the Wokwi simulator```
+└── wokwi.toml          # Configuration file to link PlatformIO with the Wokwi simulator
+``` 
 
 ---
 
