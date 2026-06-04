@@ -11,6 +11,19 @@ This project features a digital Morse Code Telegraph built using an **Arduino Un
 
 ---
 
+##  Media & Demonstration
+
+### Project Setup
+Here is how the complete hardware configuration looks on the breadboard:
+![Arduino Morse Telegraph Setup]([hardware_photo.jpg](https://media.discordapp.net/attachments/1204887824982347827/1512012924053360660/IMG_20260604_113901.jpg?ex=6a228b44&is=6a2139c4&hm=6815b8ebb861136ec7e29f67964705912d340bf187dbb2503d10fe3a57eaf059&=&format=webp&width=1760&height=1320))
+
+### Video Demonstration
+Here I am demonstrating the Morse Telegraph in action, showing the button inputs, buzzer sounds, and the 7-segment display updates:
+
+[![Watch the Video](https://youtu.be/JWow_9rV3_Y)]
+
+---
+
 ##  Hardware & Pin Configuration
 
 The components share a common ground (GND) rail on the breadboard to close the circuit safely. Below are the precise pin mappings for the project:
