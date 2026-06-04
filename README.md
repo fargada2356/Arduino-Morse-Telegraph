@@ -18,16 +18,15 @@ This project is built using **PlatformIO** inside VS Code. Below is the organiza
 ```text
 Morse-Telegraph/
 ├── .github/workflows/
-│   └── c-cpp.yml       # GitHub Actions CI/CD automation for compiling the code
-├── include/            # Header files (.h) for external definitions
-├── lib/                # Custom or external libraries used in the project
-├── src/                # Main source code folder
-│   └── main.cpp        # Principal logic containing loop() and setup()
-├── .gitignore          # Specifies intentionally untracked files to ignore
-├── diagram.json        # Hardware schematic and wiring setup created in Wokwi
-├── platformio.ini      # Main configuration file for PlatformIO (defines board, framework)
-├── README.md           # Project documentation and setup guide
-└── wokwi.toml          # Configuration file to link PlatformIO with the Wokwi simulator
+│   └── c-cpp.yml       # Automates code compilation on GitHub
+├── src/                # Core logic and module files
+│   ├── Button.h        # Detects dots and dashes based on press duration
+│   ├── Buzzer.h        # Handles the telegraph sound feedback (Pin 11)
+│   ├── LCD.h           # Visualizes typed text on the 16x2 screen
+│   ├── Led.h           # Syncs the red light with the buzzer (Pin 13)
+│   ├── morse_encoder.cpp # Main program containing setup() and loop()
+│   └── segmentDisplay.h # Manages the 1-digit 7-segment pin setup (Pins 2-9)
+└── platformio.ini      # Configures the project environment for Arduino Uno
 ``` 
 
 ---
