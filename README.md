@@ -1,6 +1,6 @@
 # Arduino Morse Telegraph
 
-This project features a digital Morse Code Telegraph built using an **Arduino Uno** microcontroller. It integrates several hardware components that work in synergy to encode inputs, provide auditory and visual feedback, and display characters in real-time.
+This project features a Morse Code Telegraph built using an **Arduino Uno** microcontroller. It integrates several hardware components that work in synergy to encode inputs, provide auditory and visual feedback, and display characters in real-time.
 
 ##  How It Works
 * **The Button:** Acts as the primary input. A single short tap registers as a **dot (.)**, while holding the button down (for 1 second) registers as a **dash (-)**.
